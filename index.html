@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Votre avis compte</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+<img src="logo.png" class="logo" onclick="history.back()">
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h1>Sélectionnez votre restaurant</h1>
+
+<p class="subtitle">
+Choisissez le restaurant concerné par votre visite
+</p>
+
+<div class="restaurants">
+
+<button class="restaurant-btn" onclick="chooseRestaurant('Mériadeck')">Mériadeck</button>
+<button class="restaurant-btn" onclick="chooseRestaurant('Sortie 9')">Sortie 9</button>
+<button class="restaurant-btn" onclick="chooseRestaurant('Sortie 10')">Sortie 10</button>
+<button class="restaurant-btn" onclick="chooseRestaurant('Sortie 11')">Sortie 11</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function chooseRestaurant(name){
+
+localStorage.setItem("restaurant", name);
+window.location.href = "rating.html";
+
+}
+
+</script>
+
+</body>
+</html>

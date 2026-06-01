@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Votre avis</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<img src="logo.png" class="logo" onclick="history.back()">
+
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h1>Partagez votre expérience</h1>
+
+<p class="subtitle">
+Quelques informations supplémentaires nous aideront à mieux comprendre votre visite
+</p>
+
+<form id="feedbackForm">
+
+<label>Comment évaluez-vous la qualité de votre repas ?</label>
+
+<select id="qualite">
+<option>Très bien</option>
+<option>Bien</option>
+<option>Moyen</option>
+<option>Mauvais</option>
+</select>
+
+
+<label>Votre commande était-elle correcte ?</label>
+
+<select id="commande">
+<option>Oui</option>
+<option>Non</option>
+</select>
+
+
+<label>Comment jugez-vous le temps d’attente ?</label>
+
+<select id="attente">
+<option>Rapide</option>
+<option>Correct</option>
+<option>Trop long</option>
+</select>
+
+
+<label>Comment évaluez-vous l’accueil du personnel ?</label>
+
+<select id="accueil">
+<option>Excellent</option>
+<option>Correct</option>
+<option>Mauvais</option>
+</select>
+
+
+<label>Comment trouvez-vous la propreté du restaurant ?</label>
+
+<select id="proprete">
+<option>Très propre</option>
+<option>Correct</option>
+<option>Sale</option>
+</select>
+
+
+<label>Votre avis (facultatif)</label>
+
+<textarea
+id="commentaire"
+placeholder="Votre message..."></textarea>
+
+
+<button
+type="submit"
+class="primary-btn">
+
+Envoyer
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+
+<form
+id="googleForm"
+action="https://docs.google.com/forms/d/e/1FAIpQLSfHkm9G61ytSwKyPqVw20VbhH7H7SvKE2Zuk8VzCWjYx04vjg/formResponse"
+method="POST"
+target="hidden_iframe"
+style="display:none;">
+
+<input name="entry.92790031" id="gRestaurant">
+<input name="entry.1644273137" id="gQualite">
+<input name="entry.1990538682" id="gCommande">
+<input name="entry.1338796880" id="gAttente">
+<input name="entry.1648199458" id="gAccueil">
+<input name="entry.1869186885" id="gProprete">
+<input name="entry.2077063848" id="gCommentaire">
+
+</form>
+<script src="js/feedback.js"></script>
+
+</body>
+
+</html>
