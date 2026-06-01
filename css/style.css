@@ -258,7 +258,8 @@ font-weight:600;
 
 
 select,
-textarea{
+textarea,
+input{
 
 padding:14px;
 
@@ -273,7 +274,8 @@ background:white;
 }
 
 select:focus,
-textarea:focus{
+textarea:focus,
+input:focus{
 
 outline:none;
 
