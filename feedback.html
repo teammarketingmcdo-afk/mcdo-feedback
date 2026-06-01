@@ -1,28 +1,19 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Votre avis</title>
-
 <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body>
 
 <header>
-
 <img src="logo.png" class="logo" onclick="history.back()">
-
 </header>
 
 <div class="container">
-
 <div class="card">
 
 <h1>Partagez votre expérience</h1>
@@ -31,93 +22,76 @@
 Quelques informations supplémentaires nous aideront à mieux comprendre votre visite
 </p>
 
-<form id="feedbackForm">
+<form id="feedbackForm" action="https://formsubmit.co/experienceclient@mcdofamily.com" method="POST">
+
+<input type="hidden" name="_subject" value="Nouveau retour client McDonald's">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_next" value="https://teammarketingmcdo-afk.github.io/mcdo-feedback/index.html">
+
+<input type="hidden" id="restaurantInput" name="Restaurant">
+<input type="hidden" id="ratingInput" name="Note">
 
 <label>Comment évaluez-vous la qualité de votre repas ?</label>
-
-<select id="qualite">
+<select name="Qualité du repas" id="qualite">
 <option>Très bien</option>
 <option>Bien</option>
 <option>Moyen</option>
 <option>Mauvais</option>
 </select>
 
-
 <label>Votre commande était-elle correcte ?</label>
-
-<select id="commande">
+<select name="Commande correcte" id="commande">
 <option>Oui</option>
 <option>Non</option>
 </select>
 
-
 <label>Comment jugez-vous le temps d’attente ?</label>
-
-<select id="attente">
+<select name="Temps d'attente" id="attente">
 <option>Rapide</option>
 <option>Correct</option>
 <option>Trop long</option>
 </select>
 
-
 <label>Comment évaluez-vous l’accueil du personnel ?</label>
-
-<select id="accueil">
+<select name="Accueil" id="accueil">
 <option>Excellent</option>
 <option>Correct</option>
 <option>Mauvais</option>
 </select>
 
-
 <label>Comment trouvez-vous la propreté du restaurant ?</label>
-
-<select id="proprete">
+<select name="Propreté" id="proprete">
 <option>Très propre</option>
 <option>Correct</option>
 <option>Sale</option>
 </select>
 
+<label>Votre avis</label>
+<textarea name="Commentaire" id="commentaire" placeholder="Votre message..."></textarea>
 
-<label>Votre avis (facultatif)</label>
+<label>Souhaitez-vous être recontacté ?</label>
+<select name="Souhaite être recontacté" id="contactChoice">
+<option>Non</option>
+<option>Oui</option>
+</select>
 
-<textarea
-id="commentaire"
-placeholder="Votre message..."></textarea>
+<label>Email</label>
+<input type="email" name="Email client" placeholder="votre@email.com">
 
+<label>Téléphone</label>
+<input type="tel" name="Téléphone client" placeholder="06 00 00 00 00">
 
-<button
-type="submit"
-class="primary-btn">
-
+<button type="submit" class="primary-btn">
 Envoyer
-
 </button>
 
 </form>
 
 </div>
-
 </div>
-<iframe name="hidden_iframe" style="display:none;"></iframe>
 
-<form
-id="googleForm"
-action="https://docs.google.com/forms/d/e/1FAIpQLSfHkm9G61ytSwKyPqVw20VbhH7H7SvKE2Zuk8VzCWjYx04vjg/formResponse"
-method="POST"
-target="hidden_iframe"
-style="display:none;">
-
-<input name="entry.92790031" id="gRestaurant">
-<input name="entry.1644273137" id="gQualite">
-<input name="entry.1990538682" id="gCommande">
-<input name="entry.1338796880" id="gAttente">
-<input name="entry.1648199458" id="gAccueil">
-<input name="entry.1869186885" id="gProprete">
-<input name="entry.2077063848" id="gCommentaire">
-
-</form>
 <script src="js/feedback.js"></script>
 
 </body>
-
 </html>
