@@ -4,22 +4,47 @@ const rating = localStorage.getItem("rating") || "Non renseigné";
 document.getElementById("restaurantInput").value = restaurant;
 document.getElementById("ratingInput").value = rating;
 
-const contactChoice =
-document.getElementById("contactChoice");
+const restaurantDisplay = document.getElementById("restaurantDisplay");
 
-const contactFields =
-document.getElementById("contactFields");
+if (restaurantDisplay) {
+    restaurantDisplay.textContent = restaurant;
+}
 
-contactChoice.addEventListener("change", () => {
+document.querySelectorAll(".choice-grid").forEach((grid) => {
 
-    if(contactChoice.value === "Oui"){
+    const targetId = grid.dataset.target;
+    const hiddenInput = document.getElementById(targetId);
+    const buttons = grid.querySelectorAll(".choice-btn");
 
-        contactFields.style.display = "block";
+    buttons.forEach((button) => {
 
-    }else{
+        button.addEventListener("click", () => {
 
-        contactFields.style.display = "none";
+            buttons.forEach(btn => btn.classList.remove("active"));
 
-    }
+            button.classList.add("active");
+
+            hiddenInput.value = button.dataset.value;
+
+            if (targetId === "contactChoice") {
+
+                const contactFields =
+                    document.getElementById("contactFields");
+
+                if (button.dataset.value === "Oui") {
+
+                    contactFields.style.display = "flex";
+
+                } else {
+
+                    contactFields.style.display = "none";
+
+                }
+
+            }
+
+        });
+
+    });
 
 });
