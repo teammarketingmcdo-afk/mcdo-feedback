@@ -2,67 +2,62 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noter votre visite</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noter votre visite</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <header>
-        <img src="logo.png" class="logo" onclick="history.back()">
-    </header>
+<header>
+<img src="logo.png" class="logo" onclick="history.back()">
+</header>
 
-    <div class="container">
+<div class="container">
 
-        <div class="card">
+<div class="card">
 
-            <h1>Évaluez votre visite</h1>
+<div class="title-row">
 
-            <p class="subtitle">
-                Votre retour nous permet d'améliorer l'expérience client
-            </p>
-            <div class="social-section">
+<h1>Évaluez votre visite</h1>
 
-                <p class="social-title">
-                    Suivre le restaurant
-                </p>
+<div class="social-top">
 
-                <div class="social-buttons">
+<a id="instagramBtn" target="_blank">
+<img src="instagram.png" class="social-icon" alt="Instagram">
+</a>
 
-                    <a id="instagramBtn" class="social-icon" target="_blank">
+<a id="tiktokBtn" target="_blank">
+<img src="tiktok.png" class="social-icon" alt="TikTok">
+</a>
 
-                        <img src="instagram.png" alt="Instagram">
+</div>
 
-                    </a>
+</div>
 
-                    <a id="tiktokBtn" class="social-icon" target="_blank">
+<p class="subtitle">
+Votre retour nous permet d'améliorer l'expérience client
+</p>
 
-                        <img src="tiktok.png" alt="TikTok">
+<div class="stars">
 
-                    </a>
+<span class="star" data-value="1">★</span>
+<span class="star" data-value="2">★</span>
+<span class="star" data-value="3">★</span>
+<span class="star" data-value="4">★</span>
+<span class="star" data-value="5">★</span>
 
-                </div>
+</div>
 
-            </div>
-            <div class="stars">
+<button class="primary-btn" id="validate">Valider</button>
 
-                <span class="star" data-value="1">★</span>
-                <span class="star" data-value="2">★</span>
-                <span class="star" data-value="3">★</span>
-                <span class="star" data-value="4">★</span>
-                <span class="star" data-value="5">★</span>
+</div>
 
-            </div>
+</div>
 
-            <button class="primary-btn" id="validate">Valider</button>
-
-        </div>
-
-    </div>
-    <script src="js/restaurants.js"></script>
-    <script src="js/script.js"></script>
+<script src="js/restaurants.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 
