@@ -43,26 +43,27 @@ stars[i].classList.add("active");
 /* ========= VALIDATION ========= */
 
 document.getElementById("validate")
-.addEventListener("click",()=>{
+.addEventListener("click", () => {
 
-if(rating===0){
+    if(rating === 0){
 
-alert("Veuillez sélectionner une note");
-return;
+        alert("Veuillez sélectionner une note");
+        return;
 
-}
+    }
 
-if(rating>=4){
+    if(rating >= 4){
 
-window.location.href =
-restaurantsData[restaurant].google;
+        localStorage.setItem("rating", rating);
 
-}else{
+        window.location.href = "google-review.html";
 
-localStorage.setItem("rating", rating);
+    }else{
 
-window.location.href = "feedback.html";
+        localStorage.setItem("rating", rating);
 
-}
+        window.location.href = "feedback.html";
+
+    }
 
 });
