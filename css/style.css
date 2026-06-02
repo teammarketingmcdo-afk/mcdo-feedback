@@ -557,3 +557,36 @@ border-radius:12px;
 }
 
 }
+@media(max-width:768px){
+
+.thank-card{
+padding:34px 24px;
+border-radius:26px;
+margin-top:20px;
+}
+
+.thank-card h1{
+font-size:34px;
+line-height:1.12;
+margin-bottom:20px;
+}
+
+.thank-card .subtitle{
+font-size:20px;
+line-height:1.45;
+margin-bottom:28px;
+}
+
+.thanks-text{
+font-size:20px;
+line-height:1.45;
+margin-bottom:34px;
+}
+
+.thank-card .primary-btn{
+height:64px;
+font-size:20px;
+border-radius:16px;
+}
+
+}
