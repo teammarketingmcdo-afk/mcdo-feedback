@@ -1,4 +1,12 @@
 const restaurant = localStorage.getItem("restaurant");
+const restaurantName =
+document.getElementById("restaurantName");
+
+if(restaurantName && restaurant){
+
+    restaurantName.textContent = restaurant;
+
+}
 
 if (restaurant && restaurantsData[restaurant]) {
 
