@@ -1,7 +1,15 @@
 const restaurantCode = localStorage.getItem("restaurant");
 const currentRestaurant = restaurantsData[restaurantCode];
 
-if(currentRestaurant){
+if(!currentRestaurant){
+
+    alert("Restaurant introuvable. Veuillez recommencer.");
+
+    localStorage.clear();
+
+    window.location.href = "index.html";
+
+}else{
 
     const restaurantName =
         document.getElementById("restaurantName");
@@ -23,7 +31,6 @@ if(currentRestaurant){
 
 const stars = document.querySelectorAll(".star");
 let rating = 0;
-
 
 /* ========= STARS ========= */
 
