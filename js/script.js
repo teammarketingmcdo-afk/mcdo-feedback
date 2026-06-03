@@ -52,15 +52,13 @@ document.getElementById("validate")
 
     }
 
+    localStorage.setItem("rating", rating);
+
     if(rating >= 4){
 
-        localStorage.setItem("rating", rating);
-
-        window.location.href = "google-review.html";
+        window.location.href = restaurantsData[restaurant].google;
 
     }else{
-
-        localStorage.setItem("rating", rating);
 
         window.location.href = "feedback.html";
 
