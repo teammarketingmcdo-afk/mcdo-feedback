@@ -1,10 +1,20 @@
-const restaurant = localStorage.getItem("restaurant") || "Non renseigné";
-const rating = localStorage.getItem("rating") || "Non renseigné";
+const restaurantCode =
+    localStorage.getItem("restaurant") || "Non renseigné";
+
+const currentRestaurant =
+    restaurantsData[restaurantCode];
+
+const restaurant =
+    currentRestaurant ? currentRestaurant.name : restaurantCode;
+
+const rating =
+    localStorage.getItem("rating") || "Non renseigné";
 
 document.getElementById("restaurantInput").value = restaurant;
 document.getElementById("ratingInput").value = rating;
 
-const restaurantDisplay = document.getElementById("restaurantDisplay");
+const restaurantDisplay =
+    document.getElementById("restaurantDisplay");
 
 if (restaurantDisplay) {
     restaurantDisplay.textContent = restaurant;

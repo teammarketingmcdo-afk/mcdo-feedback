@@ -1,49 +1,47 @@
-const restaurant = localStorage.getItem("restaurant");
-const restaurantName =
-document.getElementById("restaurantName");
+const restaurantCode = localStorage.getItem("restaurant");
+const currentRestaurant = restaurantsData[restaurantCode];
 
-if(restaurantName && restaurant){
+if(currentRestaurant){
 
-    restaurantName.textContent = restaurant;
+    const restaurantName =
+        document.getElementById("restaurantName");
 
-}
+    if(restaurantName){
 
-if (restaurant && restaurantsData[restaurant]) {
+        restaurantName.textContent =
+            currentRestaurant.name;
+
+    }
 
     document.getElementById("instagramBtn").href =
-        restaurantsData[restaurant].instagram;
+        currentRestaurant.instagram;
 
     document.getElementById("tiktokBtn").href =
-        restaurantsData[restaurant].tiktok;
+        currentRestaurant.tiktok;
 
 }
-
-
 
 const stars = document.querySelectorAll(".star");
 let rating = 0;
-
-
-
 
 
 /* ========= STARS ========= */
 
 stars.forEach((star,index)=>{
 
-star.addEventListener("click",()=>{
+    star.addEventListener("click",()=>{
 
-rating=index+1;
+        rating = index + 1;
 
-stars.forEach(s=>s.classList.remove("active"));
+        stars.forEach(s=>s.classList.remove("active"));
 
-for(let i=0;i<rating;i++){
+        for(let i = 0; i < rating; i++){
 
-stars[i].classList.add("active");
+            stars[i].classList.add("active");
 
-}
+        }
 
-});
+    });
 
 });
 
@@ -60,11 +58,20 @@ document.getElementById("validate")
 
     }
 
+    if(!currentRestaurant){
+
+        alert("Restaurant introuvable. Veuillez recommencer.");
+        window.location.href = "index.html";
+        return;
+
+    }
+
     localStorage.setItem("rating", rating);
 
     if(rating >= 4){
 
-        window.location.href = restaurantsData[restaurant].google;
+        window.location.href =
+            currentRestaurant.google;
 
     }else{
 
