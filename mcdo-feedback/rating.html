@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noter votre visite</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+<img src="logo.png" class="logo" onclick="history.back()">
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<div class="title-row">
+
+<h1>Évaluez votre visite</h1>
+
+<div class="social-top">
+
+<a id="instagramBtn" target="_blank">
+<img src="instagram.png" class="social-icon" alt="Instagram">
+</a>
+
+<a id="tiktokBtn" target="_blank">
+<img src="tiktok.png" class="social-icon" alt="TikTok">
+</a>
+
+</div>
+
+</div>
+
+<p class="subtitle">
+Votre retour nous permet d'améliorer l'expérience client
+</p>
+<div class="selected-restaurant-box">
+
+<p>Restaurant sélectionné</p>
+
+<strong id="restaurantName"></strong>
+
+</div>
+
+<div class="stars">
+
+<span class="star" data-value="1">★</span>
+<span class="star" data-value="2">★</span>
+<span class="star" data-value="3">★</span>
+<span class="star" data-value="4">★</span>
+<span class="star" data-value="5">★</span>
+
+</div>
+
+<button class="primary-btn" id="validate">Valider</button>
+
+</div>
+
+</div>
+
+<script src="js/restaurants.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+
+</html>

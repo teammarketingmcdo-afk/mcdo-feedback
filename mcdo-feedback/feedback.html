@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Votre avis</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+<img src="logo.png" class="logo" onclick="history.back()">
+</header>
+
+<div class="container">
+<div class="card">
+
+<h1>Partagez votre expérience</h1>
+
+<p class="subtitle">
+Quelques informations supplémentaires nous aideront à mieux comprendre votre visite
+</p>
+
+<div class="selected-restaurant-box">
+<p>Restaurant sélectionné</p>
+<strong id="restaurantDisplay"></strong>
+</div>
+
+<form id="feedbackForm" action="https://formsubmit.co/experienceclient@mcdofamily.com" method="POST">
+
+<input type="hidden" name="_subject" value="Nouveau retour client McDonald's">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_next" value="https://teammarketingmcdo-afk.github.io/mcdo-feedback/thanks.html">
+
+<input type="hidden" id="restaurantInput" name="Restaurant">
+<input type="hidden" id="ratingInput" name="Note">
+
+<div class="form-group">
+<label>Comment évaluez-vous la qualité de votre repas ?</label>
+
+<input type="hidden" name="Qualité du repas" id="qualite" value="Très bien">
+
+<div class="choice-grid" data-target="qualite">
+<button type="button" class="choice-btn active" data-value="Très bien">Très bien</button>
+<button type="button" class="choice-btn" data-value="Bien">Bien</button>
+<button type="button" class="choice-btn" data-value="Moyen">Moyen</button>
+<button type="button" class="choice-btn" data-value="Mauvais">Mauvais</button>
+</div>
+</div>
+
+
+<div class="form-group">
+<label>Votre commande était-elle correcte ?</label>
+
+<input type="hidden" name="Commande correcte" id="commande" value="Oui">
+
+<div class="choice-grid" data-target="commande">
+<button type="button" class="choice-btn active" data-value="Oui">Oui</button>
+<button type="button" class="choice-btn" data-value="Non">Non</button>
+</div>
+</div>
+
+
+<div class="form-group">
+<label>Comment jugez-vous le temps d’attente ?</label>
+
+<input type="hidden" name="Temps d'attente" id="attente" value="Rapide">
+
+<div class="choice-grid" data-target="attente">
+<button type="button" class="choice-btn active" data-value="Rapide">Rapide</button>
+<button type="button" class="choice-btn" data-value="Correct">Correct</button>
+<button type="button" class="choice-btn" data-value="Trop long">Trop long</button>
+</div>
+</div>
+
+
+<div class="form-group">
+<label>Comment évaluez-vous l’accueil du personnel ?</label>
+
+<input type="hidden" name="Accueil" id="accueil" value="Excellent">
+
+<div class="choice-grid" data-target="accueil">
+<button type="button" class="choice-btn active" data-value="Excellent">Excellent</button>
+<button type="button" class="choice-btn" data-value="Correct">Correct</button>
+<button type="button" class="choice-btn" data-value="Mauvais">Mauvais</button>
+</div>
+</div>
+
+
+<div class="form-group">
+<label>Comment trouvez-vous la propreté du restaurant ?</label>
+
+<input type="hidden" name="Propreté" id="proprete" value="Très propre">
+
+<div class="choice-grid" data-target="proprete">
+<button type="button" class="choice-btn active" data-value="Très propre">Très propre</button>
+<button type="button" class="choice-btn" data-value="Correct">Correct</button>
+<button type="button" class="choice-btn" data-value="Sale">Sale</button>
+</div>
+</div>
+
+
+<div class="form-group">
+<label>Votre avis</label>
+<textarea name="Commentaire" id="commentaire" placeholder="Votre message..."></textarea>
+</div>
+
+
+<div class="form-group">
+<label>Souhaitez-vous être recontacté ?</label>
+
+<input type="hidden" name="Souhaite être recontacté" id="contactChoice" value="Non">
+
+<div class="choice-grid" data-target="contactChoice">
+<button type="button" class="choice-btn active" data-value="Non">Non</button>
+<button type="button" class="choice-btn" data-value="Oui">Oui</button>
+</div>
+</div>
+
+<div id="contactFields">
+
+<div class="form-group">
+<label>Email</label>
+<input
+type="email"
+name="Email client"
+id="emailClient"
+placeholder="votre@email.com">
+</div>
+
+<div class="form-group">
+<label>Téléphone</label>
+<input
+type="tel"
+name="Téléphone client"
+id="telephoneClient"
+placeholder="06 00 00 00 00">
+</div>
+
+</div>
+
+<button type="submit" class="primary-btn">
+Envoyer
+</button>
+
+</form>
+
+</div>
+</div>
+
+<script src="js/restaurants.js"></script>
+<script src="js/feedback.js"></script>
+
+</body>
+</html>
